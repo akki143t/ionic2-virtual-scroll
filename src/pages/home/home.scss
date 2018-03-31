@@ -1,3 +1,15 @@
 page-home {
+  .author_name {
+    opacity: 0.5;
+    font-family: sans-serif;
+    color: rgb(63, 127, 191);
+    text-align: left;
+    font-size: 100%;
+  }
 
+  .info {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 }

@@ -8,8 +8,12 @@
 
 <ion-content padding>
   <ion-list >
-    <ion-item text-wrap *ngFor="let item of posts" >
-      <p >{{item.data.title}}</p>
-    </ion-item>
+    <ion-item text-wrap *ngFor="let post of postList">
+      <div (click)="loadOtherPage(post.data)">
+        <h3 class="author_name">{{post.data.author}}</h3>
+        <br>
+        <p class="info">{{post.data.title}}</p>
+        </div>
+      </ion-item>
   </ion-list>
 </ion-content>

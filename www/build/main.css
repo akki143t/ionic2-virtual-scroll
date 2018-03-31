@@ -25677,3 +25677,28 @@ ion-navbar.toolbar {
   min-height: calc(46px + constant(safe-area-inset-bottom));
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
+
+page-details .shareBtn {
+  position: absolute;
+  bottom: 2%;
+}
+
+page-details .author_name {
+  opacity: 0.5;
+  font-family: sans-serif;
+  color: #3f7fbf;
+}
+
+page-home .author_name {
+  opacity: 0.5;
+  font-family: sans-serif;
+  color: #3f7fbf;
+  text-align: left;
+  font-size: 100%;
+}
+
+page-home .info {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

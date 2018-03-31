@@ -1,25 +1,32 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { Http } from '@angular/http';
-import 'rxjs/add/operator/map';
+import { NavController, LoadingController } from 'ionic-angular';
+import { RemoteServiceProvider } from '../../providers/remote-service/remote-service';
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
+  providers: [RemoteServiceProvider]
 })
 export class HomePage {
 
-  posts: any;
+  postList : any;
 
-  constructor(public navCtrl: NavController, public http: Http) {
-
-    this.posts = null;
-
-    this.http.get('https://www.reddit.com/r/worldnews/.json')
-    .map(res => res.json())
-    .subscribe(data => {
-      this.posts = data.data.children;
-      console.log(this.posts);
+  constructor(public navCtrl: NavController, public remoteServiceProvider: RemoteServiceProvider, private loadingCtrl: LoadingController) {
+    let loading = this.loadingCtrl.create({
+      content: 'Please Wait...'
     });
+    loading.present();
+    this.getPostList();
+    loading.dismiss();
+  }
+
+  getPostList(){
+    this.remoteServiceProvider.getPosts().subscribe((data)=>{
+      this.postList = data;
+    });
+  }
+
+  loadOtherPage(post){
+    this.navCtrl.push('DetailsPage', {post: post});
   }
 }
