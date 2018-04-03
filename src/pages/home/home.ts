@@ -18,6 +18,8 @@ export class HomePage {
     loading.present();
     this.getPostList();
     loading.dismiss();
+
+   
   }
 
   getPostList(){

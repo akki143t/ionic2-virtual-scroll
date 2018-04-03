@@ -85,7 +85,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Users\kiran\data-fetch-json\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      World News\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-list >\n    <ion-item text-wrap *ngFor="let post of postList">\n      <div (click)="loadOtherPage(post.data)">\n        <h3 class="author_name">{{post.data.author}}</h3>\n        <br>\n        <p class="info">{{post.data.title}}</p>\n        </div>\n      </ion-item>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"C:\Users\kiran\data-fetch-json\src\pages\home\home.html"*/,
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\kiran\Ionic Workspace\data-fetch-json\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      World News\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content >\n  <ion-list inset >\n    <button ion-item *ngFor="let post of postList" (click)="loadOtherPage(post.data)" class="content">\n      <h3 class="author_name">{{post.data.author}}</h3>\n      <br>\n      <p class="info">{{post.data.title}}</p>\n    </button>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"C:\Users\kiran\Ionic Workspace\data-fetch-json\src\pages\home\home.html"*/,
             providers: [__WEBPACK_IMPORTED_MODULE_2__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */]]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]])
@@ -260,7 +260,7 @@ var MyApp = /** @class */ (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\kiran\data-fetch-json\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"C:\Users\kiran\data-fetch-json\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\kiran\Ionic Workspace\data-fetch-json\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"C:\Users\kiran\Ionic Workspace\data-fetch-json\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);

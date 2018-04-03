@@ -11,16 +11,14 @@ import {
   templateUrl: "details.html"
 })
 export class DetailsPage {
+  data: any;
   item: any;
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     private inAppBrowser: InAppBrowser
   ) {
-    this.item = navParams.get("post");
-  }
-  ionViewDidLoad() {
-    console.log("ionViewDidLoad DetailsPage");
+    this.data = navParams.get("post");
   }
 
   openSource() {
@@ -41,6 +39,6 @@ export class DetailsPage {
       presentationstyle : 'pagesheet',//iOS only 
       fullscreen : 'yes',//Windows only
     };
-    this.inAppBrowser.create(this.item.url, "_self", options);
+    this.inAppBrowser.create(this.data.url, "_blank", options);
   }
 }
